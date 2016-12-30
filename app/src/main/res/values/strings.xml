@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Zhihu</string>
+
+    <string name="action_notice">通知</string>
+    <string name="action_readModel_day">日间模式</string>
+    <string name="action_readModel_night">夜间模式</string>
+    <string name="action_config">设置选项</string>
+    <string name="action_theme_addOrRemove">关注主题日报</string>
+
+    <string name="action_login">请登录</string>
+    <string name="action_favorites">我的收藏</string>
+    <string name="action_download_caches">离线下载</string>
+
+    <string name="topic_list_home">首页</string>
+</resources>

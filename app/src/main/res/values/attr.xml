@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="zhihuBackgroundColor" format="color"/>
+
+    <attr name="navIcon" format="reference"/>
+    <attr name="navBackIcon" format="reference"/>
+    <attr name="overFlowIcon" format="reference"/>
+
+</resources>
