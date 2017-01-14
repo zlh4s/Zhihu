@@ -6,9 +6,11 @@
     android:id="@+id/toolBar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@color/colorLightBlue"
+    android:background="?attr/toolbarColor"
+    tools:background="@color/colorLightBlue"
     android:fitsSystemWindows="true"
-    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    app:navigationIcon="@drawable/back"
+    app:titleTextColor="@color/colorWhite"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
 </android.support.v7.widget.Toolbar>

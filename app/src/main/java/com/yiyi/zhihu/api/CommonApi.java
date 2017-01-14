@@ -1,5 +1,6 @@
 package com.yiyi.zhihu.api;
 
+import com.yiyi.zhihu.entity.commonEntity.BeforeDailyEntity;
 import com.yiyi.zhihu.entity.commonEntity.LatestDailyEntity;
 import com.yiyi.zhihu.entity.commonEntity.SplashImgEntity;
 import com.yiyi.zhihu.entity.commonEntity.StoryContentEntity;
@@ -22,11 +23,11 @@ public interface CommonApi {
     Observable<SplashImgEntity> getSplashImg();
 
     /**
-     * 获取启动界面图像
+     * 获取android最新版本
      * @return
      */
     @GET("version/android/{versionCode}")
-    Observable<SplashImgEntity> getSplashImg(@Path("versionCode") String versionCode);
+    Observable<SplashImgEntity> getLatestVersion(@Path("versionCode") String versionCode);
 
     /**
      * 获取最新文章列表
@@ -34,6 +35,13 @@ public interface CommonApi {
      */
     @GET("news/latest")
     Observable<LatestDailyEntity> getLatestDaily();
+
+    /**
+     * 获取以前的文章列表
+     * @return
+     */
+    @GET("news/before/{date}")
+    Observable<BeforeDailyEntity> getBeforeDaily(@Path("date") String date);
 
     /**
      * 获取相应文章内容

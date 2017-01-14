@@ -64,16 +64,6 @@ public class HYDrawerMenuAdapter extends MultiItemTypeAdapter<DisplaybleItem> {
                 break;
 
             case Constants.DrawerMenuItemType.ITEM_DRAWER_MENU_HOME:
-                viewHolder.getConvertView().setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (mOnItemClickListener != null) {
-                            mOnItemClickListener.onDrawerHomeClick(viewHolder.getAdapterPosition());
-                        }
-                    }
-                });
-                break;
-
             case Constants.DrawerMenuItemType.ITEM_DRAWER_MENU_CONTENT:
                 final int offset = Constants.DrawerMenuItemType.ITEM_DRAWER_MENU_CONTENT;
 
@@ -82,20 +72,23 @@ public class HYDrawerMenuAdapter extends MultiItemTypeAdapter<DisplaybleItem> {
                     public void onClick(View v) {
                         if (mOnItemClickListener != null) {
                             int position = viewHolder.getAdapterPosition();
-                            mOnItemClickListener.onItemViewClick(v, viewHolder, position, offset);
+                            mOnItemClickListener.onItemViewClick(v, viewHolder, position);
                         }
                     }
                 });
 
-                viewHolder.getView(R.id.follow_iv).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        if (mOnItemClickListener != null) {
-                            int position = viewHolder.getAdapterPosition();
-                            mOnItemClickListener.onFollowIVClick(view, viewHolder, position, offset);
+                if (viewType == Constants.DrawerMenuItemType.ITEM_DRAWER_MENU_CONTENT) {
+                    viewHolder.getView(R.id.follow_iv).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            if (mOnItemClickListener != null) {
+                                int position = viewHolder.getAdapterPosition();
+                                mOnItemClickListener.onFollowIVClick(view, viewHolder, position, offset);
+                            }
                         }
-                    }
-                });
+                    });
+                }
+
                 break;
         }
 
@@ -117,9 +110,7 @@ public class HYDrawerMenuAdapter extends MultiItemTypeAdapter<DisplaybleItem> {
     public interface onItemClickListener {
         void onDrawerHeaderItemClick();
 
-        void onDrawerHomeClick(int position);
-
-        void onItemViewClick(View view, RecyclerView.ViewHolder holder, int position, int offset);
+        void onItemViewClick(View view, RecyclerView.ViewHolder holder, int position);
 
         void onFollowIVClick(View view, RecyclerView.ViewHolder holder, int position, int offset);
     }

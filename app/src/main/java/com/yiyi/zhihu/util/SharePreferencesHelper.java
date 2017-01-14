@@ -26,7 +26,7 @@ public class SharePreferencesHelper {
     }
 
     public SharePreferencesHelper(Context context) {
-        mPreferences = context.getSharedPreferences(TAG,Context.MODE_APPEND);
+        mPreferences = context.getSharedPreferences(TAG, Context.MODE_APPEND);
     }
 
     public boolean putString(String key, String value) {

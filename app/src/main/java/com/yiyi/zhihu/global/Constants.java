@@ -20,4 +20,19 @@ public class Constants {
         int ITEM_DRAWER_MENU_HOME = 1;
         int ITEM_DRAWER_MENU_CONTENT = 2;
     }
+
+    public interface FragmentItemType {
+        int ITEM_ATTICLE = 0;
+        int ITEM_THEME_SECTION = 1;
+    }
+
+    public interface StoryType {
+        String STORY_HOME = "home";
+        String STORY_THEME = "theme";
+    }
+
+    public interface WebViewSetting {
+        String SP_NO_IMAGE = "no_image";
+        String SP_AUTO_CACHE = "auto_cache";
+    }
 }

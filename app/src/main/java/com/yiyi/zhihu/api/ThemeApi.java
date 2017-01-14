@@ -24,4 +24,7 @@ public interface ThemeApi {
      */
     @GET("theme/{themeId}")
     Observable<ThemeContentListEntity> getThemeContentList(@Path("themeId") int themeId);
+
+    @GET("editor/{editorId}/profile-page/android")
+    Observable getEditorDetail(@Path("editorId") int editorId);
 }

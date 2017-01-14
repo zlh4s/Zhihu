@@ -3,13 +3,16 @@ package com.yiyi.zhihu.common;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
 import com.yiyi.zhihu.R;
 import com.yiyi.zhihu.global.Constants;
 import com.yiyi.zhihu.util.ThemeUtil;
+import com.yiyi.zhihu.util.ToastUtils;
 
 import butterknife.BindView;
 
@@ -22,6 +25,12 @@ public class BaseActivity extends AppCompatActivity implements BaseFuncIml, View
     private static final String TAG = "BaseActivity";
 
     public ThemeUtil mThemeUtil;
+
+    private int mFragmentId;
+
+    protected Fragment mCurrFragment;
+
+    private boolean isExit = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,26 +52,6 @@ public class BaseActivity extends AppCompatActivity implements BaseFuncIml, View
         initLoad();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
-
     private void initTheme() {
         mThemeUtil = ThemeUtil.getInstance(this);
         String theme = mThemeUtil.getTheme();
@@ -82,32 +71,59 @@ public class BaseActivity extends AppCompatActivity implements BaseFuncIml, View
     }
 
     @Override
-    public void initData() {
-
-    }
+    public void initData() { }
 
     @Override
-    public void initView() {
-
-    }
+    public void initView() { }
 
     @Override
-    public void initListener() {
-
-    }
+    public void initListener() { }
 
     @Override
-    public void initLoad() {
-
-    }
+    public void initLoad() { }
 
     @Override
     public void onClick(View view) {
 
     }
 
-    protected void showShortToast(String msg) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    public void setFragmentId(int fragmentId) {
+        mFragmentId = fragmentId;
+    }
+
+    public Fragment getCurrFragment() {
+        return mCurrFragment;
+    }
+
+    public void setCurrFragment(Fragment currFragment) {
+       this.mCurrFragment = currFragment;
+    }
+
+    protected void toFragment(Fragment toFragment) {
+        if (mCurrFragment == null) {
+            ToastUtils.showToast(this, "mCurrFragment is null");
+            return;
+        }
+
+        if (toFragment == null) {
+            ToastUtils.showToast(this, "toFragment is null");
+            return;
+        }
+
+        if (toFragment.isAdded()) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .hide(mCurrFragment)
+                    .show(toFragment)
+                    .commit();
+        } else {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .hide(mCurrFragment)
+                    .add(mFragmentId, toFragment)
+                    .show(toFragment)
+                    .commit();
+        }
     }
 
     protected void openActivity(Class<? extends BaseActivity> toActivity) {
@@ -120,5 +136,22 @@ public class BaseActivity extends AppCompatActivity implements BaseFuncIml, View
             intent.putExtras(parameter);
         }
         startActivity(intent);
+    }
+
+    public void setExit(boolean isExit) {
+        this.isExit = isExit;
+    }
+
+    protected  void setToolbar(Toolbar toolbar, String title) {
+        toolbar.setTitle(title);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

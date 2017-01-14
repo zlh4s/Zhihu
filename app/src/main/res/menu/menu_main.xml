@@ -11,8 +11,15 @@
         app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/action_switch_readModel"
-        android:title="@string/action_readModel_night"
+        android:id="@+id/action_follow"
+        android:icon="@drawable/theme_add"
+        android:title="@string/action_theme_addOrRemove"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_switch_model"
+        android:title="@string/action_switch_night"
         app:showAsAction="never"/>
 
     <item

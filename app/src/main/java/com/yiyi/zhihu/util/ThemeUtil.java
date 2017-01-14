@@ -23,7 +23,6 @@ public class ThemeUtil {
     }
 
     public ThemeUtil(Context context) {
-        super();
         mSPHelper = SharePreferencesHelper.getInstance(context);
     }
 
