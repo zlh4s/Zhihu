@@ -8,6 +8,8 @@
  ![](https://github.com/yiyibb/Zhihu/blob/master/app/2.png)
  ![](https://github.com/yiyibb/Zhihu/blob/master/app/3.png)
  ![](https://github.com/yiyibb/Zhihu/blob/master/app/4.png)
+ ![](https://github.com/yiyibb/Zhihu/blob/master/app/5.png)
+ ![](https://github.com/yiyibb/Zhihu/blob/master/app/6.png)
 ## 计划 <br>
 - 评论界面 <br>
 - 日夜模式切换 <br>
