@@ -21,8 +21,8 @@
     <color name="colorDayCardViewTextSel">#B4B4B4</color>
     <color name="colorDayNavHeader">@color/colorDayPrimary</color>
     <color name="colorDayNavMenuUnsel">@color/colorWhite</color>
-    <color name="colorDayNavMenuSel">#F0F0F0</color>
-    <color name="colorDayNavMenuText">@color/colorBlack</color>
+    <color name="colorDayNavMenuSel">@color/colorLightGray</color>
+    <color name="colorDayNavMenuText">@color/colorWhite</color>
 
 
     <color name="colorNightPrimary">#222222</color>
@@ -36,6 +36,7 @@
     <color name="colorNightNavMenuUnsel">#343434</color>
     <color name="colorNightNavMenuSel">#2C2C2C</color>
     <color name="colorNightNavMenuText">#858585</color>
+
 
 
 </resources>

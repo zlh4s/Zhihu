@@ -61,6 +61,7 @@
     <dimen name="textSize_16">16sp</dimen>
     <dimen name="textSize_18">18sp</dimen>
     <dimen name="textSize_20">20sp</dimen>
+    <dimen name="textSize_22">22sp</dimen>
 
     <dimen name="img_24">24dp</dimen>
     <dimen name="img_48">48dp</dimen>

@@ -22,6 +22,7 @@
         <item name="navHeaderColor">@color/colorDayNavHeader</item>
         <!--<item name="navMenuItemDaySelector">@drawable/drawer_menu_item_day_selector</item>-->
         <item name="navMenuTextColor">@color/colorDayNavMenuText</item>
+        <item name="backgroundColor">@color/colorDayWindowBackground</item>
         <!--<item name="bannerTitleColor">@color/colorDayBannerTitle</item>-->
 
     </style>
@@ -40,6 +41,12 @@
         <item name="navHeaderColor">@color/colorNightNavHeader</item>
         <!--<item name="navMenuItemNightSelector">@drawable/drawer_menu_item_night_selector</item>-->
         <item name="navMenuTextColor">@color/colorNightNavMenuText</item>
+        <item name="backgroundColor">@color/colorNightWindowBackground</item>
+        
         <!--<item name="bannerTitleColor">@color/colorNightBannerTitle</item>-->
+    </style>
+
+    <style name="BaseAppThemeDark" parent="Theme.AppCompat.NoActionBar">
+        
     </style>
 </resources>

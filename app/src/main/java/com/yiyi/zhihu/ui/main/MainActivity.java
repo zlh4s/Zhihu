@@ -192,13 +192,13 @@ public class MainActivity extends BaseFrameActivity<DrawerMainPresenter, DrawerM
                 MenuItem switchModel = mtoolBar.getMenu().findItem(R.id.action_switch_model);
                 switch (curTheme) {
                     case Constants.Theme.DAY_THEME:
-                        switchModel.setTitle(this.getResources().getString(R.string.action_switch_night));
+                        switchModel.setTitle(this.getResources().getString(R.string.action_switch_day));
                         setTheme(R.style.NightTheme);
                         mThemeUtil.setTheme(Constants.Theme.NIGHT_THEME);
                         changeTheme();
                         break;
                     case Constants.Theme.NIGHT_THEME:
-                        switchModel.setTitle(this.getResources().getString(R.string.action_switch_day));
+                        switchModel.setTitle(this.getResources().getString(R.string.action_switch_night));
                         setTheme(R.style.DayTheme);
                         mThemeUtil.setTheme(Constants.Theme.DAY_THEME);
                         changeTheme();
