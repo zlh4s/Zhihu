@@ -1,14 +1,11 @@
 package com.yiyi.zhihu.ui.detail;
 
 import android.content.Intent;
-import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
