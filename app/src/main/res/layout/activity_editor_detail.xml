@@ -7,4 +7,13 @@
     android:layout_height="match_parent"
     tools:context="com.yiyi.zhihu.ui.editor.EditorListActivity">
 
+    <include layout="@layout/common_toolbar"
+             android:id="@+id/toolBar" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar" />
+
 </RelativeLayout>

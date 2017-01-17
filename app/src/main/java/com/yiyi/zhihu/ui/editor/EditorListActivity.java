@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.yiyi.zhihu.R;
+import com.yiyi.zhihu.common.BaseActivity;
 import com.yiyi.zhihu.entity.themeDaily.EditorsEntity;
 import com.yiyi.zhihu.loader.GlideImageLoader;
 import com.yiyi.zhihu.mvpframe.base.BaseFrameActivity;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class EditorListActivity extends BaseFrameActivity<EditorPresenter, EditorModel> {
+public class EditorListActivity extends BaseActivity {
 
     private static final String TAG = "EditorListActivity";
 

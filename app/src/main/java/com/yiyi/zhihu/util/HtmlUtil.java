@@ -13,7 +13,7 @@ public class HtmlUtil {
     // css style tag, 需要格式化
     private static final String NEEDED_FORMAT_CSS_TAG = "<link rel=\"stylesheet\" type=\"text/css\" href=\"%s\"/>";
 
-    // js script tag,需要格式化
+    // js script tag, 需要格式化
     private static final String NEEDED_FORMAT_JS_TAG = "<script src=\"%s\"></script>";
 
     public static final String MIME_TYPE = "text/html; charset=utf-8";
