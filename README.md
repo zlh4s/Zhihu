@@ -1,5 +1,6 @@
 # Zhihu <br>
 该项目是一个高仿的知乎日报客户端，融合了目前较为流行的设计元素，项目的UI设计采用 Google Material Design 设计风格，图片素材均来自App知乎日报，架构采用MVP的设计模式，网络请求采用的是时下流行的RxJava + Retrofit组合。<br>
+![](http://i.imgur.com/bKd1sU0.jpg)
 
 ## Api 相关 <br>
 #### [知乎日报api分析](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)
